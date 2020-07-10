@@ -11,6 +11,10 @@ body {
     font-weight: 500;
 }
 
+main {
+    width: 100vw;
+}
+
 h1, h2, h3, h4, h5, h6 {
     color: #144499;
     /*font-family: 'Josefin Sans', sans-serif;*/
@@ -56,6 +60,35 @@ a.nav-link {
     border-radius: 0.4em;
 }
 
+.navbar-toggler {
+    z-index: 4;
+}
+
+.navbar_mobile {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: rgba(20,68,153,.9);
+    transform-origin: right center;
+    animation: slideIn 0.2s ease-in-out;
+}
+
+.mobile-nav_ul {
+    z-index: 3;
+}
+
+.mobile-nav-link {
+    color: white;
+}
+
+.mobile-nav-link:hover {
+    color: #30c57b;
+}
+
+.mobile-nav-item {
+    padding: 1rem 1rem;
+    list-style-type: none;
+}
+
 .btn-outline-primary {
     border-color: #144499;
     color: #144499;
@@ -75,8 +108,10 @@ header {
     background-image: url(https://storage.googleapis.com/piggybankservice.appspot.com/statics/woman-header-min.png);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 50vw;
+    background-position: top right;
+    min-height: 50vw;
     padding: 4em;
+    margin-top: 2em;
 }
 
 header h1 {
@@ -117,7 +152,7 @@ section {
 }
 
 .content {
-    height: 70vw;
+    height: fit-content;
     color: #627081;
 }
 
@@ -132,7 +167,7 @@ section {
 }
 
 .content_card {
-    width: 33%;
+    min-width: 33%;
     margin: 0.5em;
     padding: 2em;
     border-radius: 0.5em;
@@ -203,6 +238,7 @@ section {
 
 .stories h2 {
     color: white;
+    margin: 1em 0 1em;
 }
 
 .story {
@@ -264,6 +300,7 @@ section {
 footer {
     font-size: 14px;
     padding: 4em;
+    height: fit-content;
 }
 
 footer, footer h6 {
@@ -293,11 +330,122 @@ footer a {
     margin-bottom: 0.5em;
 }
 
+.hide {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-collapse {
+        display: none;
+    }
+    .navbar-toggler {
+        display: inline-block;
+    }
+    .content_cards_container {
+        flex-direction: column;
+    }
+    .saver {
+        flex-direction: column;
+    }
+    .saver_img {
+        max-width: 100%;
+    }
+    .saver_text {
+        max-width: 100%;
+        text-align: center;
+    }
+    .story:nth-child(2n) {
+        left: 0;
+    }
+    .story_card {
+        min-width: 70%;
+    }
+    .footer_links, .footer_info {
+        float: left;
+        text-align: center;
+    }
+    .footer_links {
+        width: 40%;
+    }
+    .footer_info {
+        margin: 2em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    .logo img {
+        max-height: 2.5em;
+    }
+    .navbar {
+        padding: 0 1em;
+    }
+    header {
+        padding: 2em;
+        margin-bottom: 2em;
+        text-align: center;
+        background-image: none;
+    }
+    header p {
+        width: 100%;
+    }
+    header h1 {
+        margin-top: 2.5em;
+        margin-bottom: 0.8em;
+    }
+    section {
+        padding: 1.4em 1.5em;
+    }
+    .security-items {
+        max-width: 100%;
+        margin: 0 1em;
+    }
+    .saver_img {
+        margin: 0;
+    }
+    .story {
+        padding: 0.5em 0;
+    }
+    .story_img img {
+        width: 3em;
+        height: 3em;
+        margin-right: .5em;
+    }
+    .story_card {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+    .content_cta {
+        padding: 3em 1.5em;;
+    }
+    .content_cta h2 {
+        margin-bottom: 1em;
+    }
+    footer {
+        padding: 2em 1.5em;
+    }
+}
+
 @keyframes bounce {
     from {
         transform: translateY(0);
     }
     to {
         transform: translateY(20px);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
     }
 }

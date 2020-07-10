@@ -20,7 +20,7 @@
             <img src="https://storage.googleapis.com/piggybankservice.appspot.com/statics/piggy-png_1_.png" alt="logo">
         </div>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        <button class="navbar-toggler hide" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -31,7 +31,7 @@
                     <a class="nav-link" href="#">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Stories</a>
+                    <a class="nav-link" href="#stories">Stories</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">FAQ</a>
@@ -44,6 +44,29 @@
                 </li>
                 <li class="nav-item">
                     <a href="#" class="btn btn-outline-primary btn-large">Create a Free Account</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navbar_mobile hide">
+            <ul class="mobile-nav_ul">
+                <li class="mobile-nav-item">
+                    <a class="mobile-nav-link" href="#">About</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a class="mobile-nav-link" href="#stories">Stories</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a class="mobile-nav-link" href="#">FAQ</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a class="mobile-nav-link" href="#">Blog</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a class="mobile-nav-link" href="#">Log In</a>
+                </li>
+                <li class="mobile-nav-item">
+                    <a href="#" class="mobile-nav-link">Create a Free Account</a>
                 </li>
             </ul>
         </div>
@@ -183,7 +206,7 @@
         <!--Saver Recognition Content End-->
 
         <!--Stories Section Start-->
-        <section class="stories">
+        <section class="stories" id="stories">
             <h2>Recently verified customer stories/feedback</h2>
             <div class="stories_container">
                 <div class="flex_row story">
@@ -389,6 +412,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
