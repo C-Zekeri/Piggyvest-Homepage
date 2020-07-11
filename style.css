@@ -398,6 +398,13 @@ footer a {
         margin-top: 2.5em;
         margin-bottom: 0.8em;
     }
+    .app-store-badges {
+        width: fit-content;
+        margin: 0 auto;
+    }
+    .app-store-badges a img {
+        width: 5em;
+    }
     section {
         padding: 1.4em 1.5em;
     }
